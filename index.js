@@ -54,7 +54,7 @@ $(document).ready(function () {
       // Thực hiện hiệu ứng rơi và mờ dần
       $newElement.animate(
         { top: $(document).height(), opacity: 0, rotate: 360 },
-        4000,
+        6000,
         function () {
           // Khi hoàn thành, ẩn hình ảnh
           $newElement.remove();
@@ -97,7 +97,7 @@ $(document).ready(function () {
     // Thực hiện hiệu ứng rơi và mờ dần
     $newElement.animate(
       { top: $(document).height(), opacity: 0, rotate: 360 },
-      4000,
+      6000,
       function () {
         // Khi hoàn thành, ẩn hình ảnh
         $newElement.remove();
