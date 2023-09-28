@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <style>
+    /* Định dạng cho phần tử hình ảnh */
+    #falling-image {
+      position: absolute;
+      display: none; /* Ẩn ban đầu */
+      animation: rotate 2s forwards;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 80px;
+      object-fit: scale-down;
+    }
+    #falling-image1 {
+      position: absolute;
+      display: none; /* Ẩn ban đầu */
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      padding: 5px;
+      width: 80px;
+      /* animation: rotate 2s forwards; */
+      object-fit: scale-down;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes -rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+    .background-main {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+    .abs {
+      position: absolute;
+    }
+  </style>
+
+  <body>
+    <img src="./image/image5.png" class="background-main" />
+    <div class="abs">
+      <img
+        id="falling-image"
+        src="./image/image5.png"
+        alt="Hình ảnh rơi"
+        width="100"
+        height="100"
+      />
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="./index.js"></script>
+</html>
