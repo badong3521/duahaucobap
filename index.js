@@ -25,12 +25,12 @@ $(document).ready(function () {
 
       ////////////////////////////
       var $newElement = $("<img />");
+      var $newElementHeart = $("<div class=heart'></div>");
 
       const randomImageKey = getRandomImageKey();
 
       // Lấy đường dẫn ảnh tương ứng từ đối tượng image
       const imageURL = image[randomImageKey];
-      console.log("imageURL", imageURL);
 
       // Đặt thuộc tính cho phần tử &lt;img&gt;
       $newElement.attr({
@@ -43,9 +43,11 @@ $(document).ready(function () {
 
       // Đặt vị trí cho phần tử DOM mới
       $newElement.css({ top: y, left: x });
+      //   $newElementHeart.css({ top: y, left: x });
 
       // Thêm phần tử DOM mới vào tài liệu
       $("body").append($newElement);
+      $("body").append($newElementHeart);
 
       $newElement.css({ top: y, left: x, opacity: 1, display: "block" });
 
@@ -75,7 +77,6 @@ $(document).ready(function () {
 
     // Lấy đường dẫn ảnh tương ứng từ đối tượng image
     const imageURL = image[randomImageKey];
-    console.log("imageURL", imageURL);
 
     $newElement.attr({
       id: Math.random() < 0.5 ? a : b,
